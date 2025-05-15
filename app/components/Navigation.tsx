@@ -8,7 +8,7 @@ export function Navigation() {
   return (
     <nav className="bg-blue-600 text-white p-4">
       <div className="container mx-auto flex items-center justify-between">
-        <Link to="/" className="text-xl font-bold">IS-U Navigator</Link>
+        <Link to="/" className="text-xl font-bold">E-Invoicing Navigator</Link>
         <ul className="flex space-x-6">
           <li>
             <Link 

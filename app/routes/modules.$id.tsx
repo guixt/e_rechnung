@@ -1,15 +1,16 @@
 import { useParams } from "react-router";
 import modules from "../data/modules";
-import { DeviceManagementSim } from "../components/simulations/DeviceManagementSim";
-import { TariffManagementSim } from "../components/simulations/TariffManagementSim";
-import { CustomizingSim } from "../components/simulations/CustomizingSim";
-import { BillingSimulation } from "../components/simulations/BillingSimulation";
-import { MarketCommunicationSim } from "../components/simulations/MarketCommunicationSim";
-import { ProcessStatusSim } from "../components/simulations/ProcessStatusSim";
 import { InvoicingAccountingSim } from "../components/simulations/InvoicingAccountingSim";
-import { SecurityRolesSim } from "../components/simulations/SecurityRolesSim";
-import { TariffDisturbanceMission } from "../components/missions/TariffDisturbanceMission";
-import { IntercompanyTroubleshootingSim } from "../components/simulations/IntercompanyTroubleshootingSim";
+// Neue Simulationskomponenten für E-Invoicing
+import { SapOutboundInvoiceSim } from "../components/simulations/SapOutboundInvoiceSim";
+import { EInvoicingBasicsSim } from "../components/simulations/EInvoicingBasicsSim";
+import { B2BFormatsSim } from "../components/simulations/B2BFormatsSim";
+import { SeeburgerBICSim } from "../components/simulations/SeeburgerBICSim";
+import { MappingConceptsSim } from "../components/simulations/MappingConceptsSim";
+import { IntegrationScenariosSim } from "../components/simulations/IntegrationScenariosSim";
+import { ComplianceArchivingSim } from "../components/simulations/ComplianceArchivingSim";
+import { EInvoiceImplementationMission } from "../components/missions/EInvoiceImplementationMission";
+import { TroubleshootingInvoiceTransmissionSim } from "../components/simulations/TroubleshootingInvoiceTransmissionSim";
 
 export default function ModuleDetail() {
   const { id } = useParams();
@@ -22,32 +23,32 @@ export default function ModuleDetail() {
   const renderModuleContent = () => {
     if (module.type === 'mission') {
       switch (module.id) {
-        case 'mission-tariff-disturbance':
-          return <TariffDisturbanceMission />;
+        case 'mission-e-invoice-implementation':
+          return <EInvoiceImplementationMission />;
         // Add other missions here in the future
         default:
           return <div className="p-4 bg-yellow-50 rounded"><p><i>Diese Consulting Mission wird bald verfügbar sein! 🚧</i></p></div>;
       }
     } else if (module.type === 'simulation') {
       switch (module.id) {
-        case 'devices':
-          return <DeviceManagementSim />;
-        case 'tariffs':
-          return <TariffManagementSim />;
-        case 'customizing':
-          return <CustomizingSim />;
-        case 'billing':
-          return <BillingSimulation />;
-        case 'marketcomm':
-          return <MarketCommunicationSim />;
-        case 'processes':
-          return <ProcessStatusSim />;
-        case 'invoicingaccounting':
+        case 'sap-outbound-invoice':
+          return <SapOutboundInvoiceSim />;
+        case 'e-invoicing-basics':
+          return <EInvoicingBasicsSim />;
+        case 'b2b-formats':
+          return <B2BFormatsSim />;
+        case 'seeburger-bic':
+          return <SeeburgerBICSim />;
+        case 'mapping-concepts':
+          return <MappingConceptsSim />;
+        case 'integration-scenarios':
+          return <IntegrationScenariosSim />;
+        case 'invoicing-accounting':
           return <InvoicingAccountingSim />;
-        case 'securityroles':
-          return <SecurityRolesSim />;
-        case 'intercompany-troubleshooting':
-          return <IntercompanyTroubleshootingSim />;
+        case 'compliance-archiving':
+          return <ComplianceArchivingSim />;
+        case 'troubleshooting-invoice-transmission':
+          return <TroubleshootingInvoiceTransmissionSim />;
         default:
           return <div className="p-4 bg-yellow-50 rounded"><p><i>Die Simulation für dieses Modul wird bald verfügbar sein! 🚧</i></p></div>;
       }
