@@ -9,6 +9,10 @@ const modules = [
   { id: "compliance-archiving", title: "Compliance & Archivierung", description: "Rechtskonforme Archivierung von elektronischen Rechnungen", type: 'simulation' },
   { id: "mission-e-invoice-implementation", title: "Consulting Mission: E-Invoicing Implementierung", description: "Simulierter Consultant-Einsatz zur Implementierung einer E-Invoicing-Lösung", type: 'mission' },
   { id: "troubleshooting-invoice-transmission", title: "Troubleshooting: Rechnungsübermittlung", description: "Eine Rechnung wird nicht korrekt übermittelt. Finde und behebe den Fehler!", type: 'simulation' },
+  { id: "vida-peppol-intl", title: "ViDA & Peppol Netzwerk", description: "Überblick über ViDA, Peppol und internationale E-Invoicing-Anforderungen", type: 'simulation' },
+  { id: "sap-sd-fi-integration", title: "SAP SD/FI E-Invoicing Integration", description: "Rechnungsprozesse, IDocs und Output Management in SAP", type: 'simulation' },
+  { id: "edi-basics-protocols", title: "EDI Basics & Protokolle", description: "UN/EDIFACT, AS2, OFTP2, SFTP und mehr", type: 'simulation' },
+  { id: "presales-consulting-skills", title: "Presales & Consulting Skills", description: "Storytelling, Demo-Gestaltung und Umgang mit Kunden", type: 'simulation' },
 ];
 
 export default modules;

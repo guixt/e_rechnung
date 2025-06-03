@@ -11,6 +11,10 @@ import { IntegrationScenariosSim } from "../components/simulations/IntegrationSc
 import { ComplianceArchivingSim } from "../components/simulations/ComplianceArchivingSim";
 import { EInvoiceImplementationMission } from "../components/missions/EInvoiceImplementationMission";
 import { TroubleshootingInvoiceTransmissionSim } from "../components/simulations/TroubleshootingInvoiceTransmissionSim";
+import { VidaPeppolInternationalSim } from "../components/simulations/VidaPeppolInternationalSim";
+import { SapSDFIIntegrationSim } from "../components/simulations/SapSDFIIntegrationSim";
+import { EdiBasicsSim } from "../components/simulations/EdiBasicsSim";
+import { PresalesConsultingSim } from "../components/simulations/PresalesConsultingSim";
 
 export default function ModuleDetail() {
   const { id } = useParams();
@@ -49,6 +53,14 @@ export default function ModuleDetail() {
           return <ComplianceArchivingSim />;
         case 'troubleshooting-invoice-transmission':
           return <TroubleshootingInvoiceTransmissionSim />;
+        case 'vida-peppol-intl':
+          return <VidaPeppolInternationalSim />;
+        case 'sap-sd-fi-integration':
+          return <SapSDFIIntegrationSim />;
+        case 'edi-basics-protocols':
+          return <EdiBasicsSim />;
+        case 'presales-consulting-skills':
+          return <PresalesConsultingSim />;
         default:
           return <div className="p-4 bg-yellow-50 rounded"><p><i>Die Simulation für dieses Modul wird bald verfügbar sein! 🚧</i></p></div>;
       }
