@@ -33,7 +33,7 @@ type SimulationState = 'idle' | 'billingDone' | 'invoicingDone' | 'printDone' | 
 
 const BAPI_EXAMPLES = {
   CREATE_FICA_DOC: `
-// BAPI_ACC_DOCUMENT_POST oder BAPI_ISUACCOUNT_CREATEFROMDATA (vereinfacht)
+// BAPI_ACC_DOCUMENT_POST oder andere FI-CA APIs (vereinfacht)
 {
   DOCUMENTHEADER: {
     BUS_ACT: 'RFBU', // Geschäftsvorgang Hauptbuchhaltung
@@ -247,7 +247,7 @@ export function InvoicingAccountingSim() {
           <li><b>Fehlerbehandlung:</b> Fehlerhafte Fakturabelege (z.B. durch falsche Stammdaten) müssen storniert werden (z.B. via <code>EA20</code> - Fakturierungsstorno). Dies erzeugt oft einen Stornofakturabeleg und entsprechende FI-CA Buchungen.</li>
           <li><b>Wichtige BAPIs:</b>
             <ul className="list-disc list-inside ml-4">
-                <li><code>BAPI_ISUACCOUNT_CREATEFROMDATA</code>: Zum Erstellen von FI-CA Belegen.</li>
+                <li>FI-CA API zum Erstellen von Belegen (z.B. BAPI_ACC_DOCUMENT_POST).</li>
                 <li><code>BAPI_BILLINGDOC_CREATEFROMEXT</code>: Zum externen Erstellen von Abrechnungsbelegen.</li>
                 <li><code>BAPI_INVOICEDOC_CREATEMULTIPLE</code>: Zum Erstellen von Fakturabelegen.</li>
                 <li><code>BAPI_INV_PRINTDOCUMENT_CREATE</code>: Zum Erstellen von Druckbelegen für die Rechnung.</li>

@@ -85,9 +85,9 @@ Ihre Aufgabe ist es, das Problem zu analysieren.
   };
 
   const handleCheckWLF_IDOC = () => {
-    addLogEntry("Aktion: IS-U spezifisches IDoc Monitoring (WLF_IDOC) prüfen.", true);
+    addLogEntry("Aktion: Branchenspezifisches IDoc Monitoring (WLF_IDOC) prüfen.", true);
     setCurrentSimStep('check_wlf_idoc');
-    addLogEntry("System: In WLF_IDOC werden keine spezifischen IS-U Verarbeitungsprotokolle für den Vorgang gefunden. Dies deutet darauf hin, dass das Problem vor der IS-U spezifischen Verarbeitung auftrat.");
+    addLogEntry("System: In WLF_IDOC werden keine branchenspezifischen Verarbeitungsprotokolle für den Vorgang gefunden. Dies deutet darauf hin, dass das Problem vor dieser speziellen Verarbeitung auftrat.");
   };
 
   const renderInitialStepActions = () => (
@@ -97,7 +97,7 @@ Ihre Aufgabe ist es, das Problem zu analysieren.
       <button onClick={handleCheckEDPARTNER} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">2. Partnervereinbarungen prüfen (EDPARTNER)</button>
       <button onClick={handleCheckWE20} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">3. Partnerprofile prüfen (WE20)</button>
       <button onClick={handleCheckSM59WE21} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">4. Port-Konfiguration prüfen (SM59/WE21)</button>
-      <button onClick={handleCheckWLF_IDOC} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">5. IS-U IDoc Monitoring prüfen (WLF_IDOC)</button>
+      <button onClick={handleCheckWLF_IDOC} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">5. Branchenspezifisches IDoc Monitoring prüfen (WLF_IDOC)</button>
     </div>
   );
 
@@ -132,14 +132,14 @@ Ihre Aufgabe ist es, das Problem zu analysieren.
             <p className="text-md font-semibold mb-2">Port-Konfiguration scheint korrekt. Nächste Schritte?</p>
             <button onClick={handleCheckWE02} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">IDoc Monitoring prüfen (WE02/WE05)</button>
             <button onClick={handleCheckWE20} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">Partnerprofile prüfen (WE20)</button>
-            <button onClick={handleCheckWLF_IDOC} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">IS-U IDoc Monitoring prüfen (WLF_IDOC)</button>
+            <button onClick={handleCheckWLF_IDOC} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">Branchenspezifisches IDoc Monitoring prüfen (WLF_IDOC)</button>
             <button onClick={() => setCurrentSimStep('initial')} className="w-full mt-2 px-4 py-2 bg-amber-500 text-white rounded hover:bg-amber-600 text-left">Zurück zur Haupt-Aktionsauswahl</button>
           </div>
         );
       case 'check_wlf_idoc':
         return (
           <div className="space-y-2">
-            <p className="text-md font-semibold mb-2">Keine IS-U spezifischen Logs in WLF_IDOC. Nächste Schritte?</p>
+            <p className="text-md font-semibold mb-2">Keine branchenspezifischen Logs in WLF_IDOC. Nächste Schritte?</p>
             <button onClick={handleCheckWE02} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">IDoc Monitoring prüfen (WE02/WE05)</button>
             <button onClick={handleCheckWE20} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">Partnerprofile prüfen (WE20)</button>
             <button onClick={handleCheckEDPARTNER} className="w-full px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 text-left">Partnervereinbarungen prüfen (EDPARTNER)</button>

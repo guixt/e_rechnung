@@ -26,111 +26,93 @@ interface Impact {
 export function CustomizingSim() {
   const [spro, setSpro] = useState<CustomizingNode[]>([
     {
-      id: "ISU",
-      name: "IS-U/DEREGULIERT",
-      description: "Grundeinstellungen für IS-U",
+      id: "EINV",
+      name: "E-Invoicing",
+      description: "Grundkonfiguration für elektronische Rechnungen",
       children: [
         {
           id: "BASIC",
-          name: "Grundeinstellungen",
-          description: "Allgemeine IS-U Einstellungen",
+          name: "Grundkonfiguration",
+          description: "Allgemeine Einstellungen",
           settings: [
             {
-              id: "SPARTENSTEUERUNG",
-              name: "Spartensteuerung",
-              type: "SELECT",
-              value: "STROM",
-              options: ["STROM", "GAS", "WASSER"],
+              id: "NUMBER_RANGE",
+              name: "Nummernkreis",
+              type: "INPUT",
+              value: "100000",
               impacts: [
                 {
-                  area: "Geräteverwaltung",
-                  description: "Bestimmt verfügbare Gerätetypen und Messgrößen",
+                  area: "Rechnungsbelege",
+                  description: "Vergabe der Rechnungsnummern",
                   severity: "HIGH"
-                },
-                {
-                  area: "Tarife",
-                  description: "Filtert spartenspezifische Tarifmerkmale",
-                  severity: "MEDIUM"
                 }
               ]
             },
             {
-              id: "BILLINGACTIVE",
-              name: "Fakturierung aktiv",
+              id: "AUTO_POSTING",
+              name: "Automatische Verbuchung",
               type: "CHECKBOX",
               value: true,
               impacts: [
                 {
-                  area: "Abrechnung",
-                  description: "Deaktiviert/Aktiviert die gesamte Rechnungsstellung",
-                  severity: "HIGH"
+                  area: "Buchhaltung",
+                  description: "Steuert die automatische Verbuchung",
+                  severity: "MEDIUM"
                 }
               ]
             }
           ]
         },
         {
-          id: "DEVICE",
-          name: "Geräteverwaltung",
-          description: "Einstellungen für Geräte und Zähler",
+          id: "OUTPUT",
+          name: "Output Management",
+          description: "Kanäle und Formate",
           settings: [
             {
-              id: "AUTOINSTALL",
-              name: "Automatische Installation",
-              type: "CHECKBOX",
-              value: false,
-              impacts: [
-                {
-                  area: "Geräteverwaltung",
-                  description: "Erlaubt automatische Zählerinstallation bei Anlage",
-                  severity: "MEDIUM"
-                }
-              ]
-            },
-            {
-              id: "READINGVALIDATION",
-              name: "Zählerstandsprüfung",
+              id: "CHANNEL",
+              name: "Standard-Ausgabekanal",
               type: "SELECT",
-              value: "STRICT",
-              options: ["NONE", "BASIC", "STRICT"],
+              value: "EMAIL",
+              options: ["EMAIL", "PRINT", "EDI"],
               impacts: [
                 {
-                  area: "Ablesung",
-                  description: "Bestimmt Intensität der Plausibilitätsprüfungen",
-                  severity: "HIGH"
+                  area: "Kommunikation",
+                  description: "Bestimmt, wie Rechnungen versendet werden",
+                  severity: "MEDIUM"
+                }
+              ]
+            },
+            {
+              id: "FORMAT",
+              name: "PDF-Format",
+              type: "SELECT",
+              value: "XRechnung",
+              options: ["XRechnung", "ZUGFeRD"],
+              impacts: [
+                {
+                  area: "Layout",
+                  description: "Wählt das Standard-Format für die PDF-Erzeugung",
+                  severity: "LOW"
                 }
               ]
             }
           ]
         },
         {
-          id: "BILLING",
-          name: "Abrechnung",
-          description: "Abrechnungsrelevante Einstellungen",
+          id: "POSTING",
+          name: "Buchungskreis-Einstellungen",
+          description: "Parameter für die Verbuchung",
           settings: [
             {
-              id: "BILLCYCLE",
-              name: "Abrechnungszyklus",
-              type: "INPUT",
-              value: "12",
+              id: "POST_ACTIVE",
+              name: "Buchung aktiv",
+              type: "CHECKBOX",
+              value: true,
               impacts: [
                 {
-                  area: "Abrechnung",
-                  description: "Standardintervall für Turnusabrechnung (Monate)",
-                  severity: "MEDIUM"
-                }
-              ]
-            },
-            {
-              id: "TOLERANCE",
-              name: "Toleranz Verbrauchsabweichung",
-              type: "INPUT",
-              value: "20",
-              impacts: [
-                {
-                  area: "Abrechnung",
-                  description: "Maximale Abweichung in % vor Prüfprotokoll",
-                  severity: "MEDIUM"
+                  area: "FI",
+                  description: "Aktiviert die automatische Verbuchung von Rechnungen",
+                  severity: "HIGH"
                 }
               ]
             }
@@ -299,13 +281,7 @@ export function CustomizingSim() {
           <li>Customizing-Einstellungen werden in der Regel in Entwicklungssystemen vorgenommen und dann über Transportaufträge (Transaktionen `SE09`, `SE10`) in Test- und Produktivsysteme (`STMS`) übertragen.</li>
           <li>Die Mandantenverwaltung (`SCC4`) legt fest, ob und wie Änderungen in einem Mandanten erlaubt sind.</li>
           <li>Berechtigungen für Customizing-Aktivitäten und den Zugriff auf Transaktionen werden über Rollen in der `PFCG` gesteuert.</li>
-          <li>Viele Einstellungen, die hier simuliert werden (z.B. Spartensteuerung, Abrechnungszyklen), sind tief im SPRO-Pfad unter <i>SAP Utilities</i> zu finden. Beispielpfade könnten sein:
-            <ul className="list-disc list-inside pl-4">
-              <li><i>SAP Customizing Einführungsleitfaden - SAP Utilities - Grundeinstellungen - ...</i></li>
-              <li><i>SAP Customizing Einführungsleitfaden - SAP Utilities - Geräteverwaltung - ...</i></li>
-              <li><i>SAP Customizing Einführungsleitfaden - SAP Utilities - Vertragsabrechnung - ...</i></li>
-            </ul>
-          </li>
+          <li>Viele Einstellungen, die hier simuliert werden (z.B. Nummernkreise oder Outputparameter), befinden sich im SPRO unter <i>Vertrieb - Fakturierung - Elektronische Rechnung</i> oder in ähnlichen Pfaden.</li>
           <li>Es ist entscheidend, die Auswirkungen von Customizing-Änderungen sorgfältig zu testen und zu dokumentieren, bevor sie in produktive Umgebungen übernommen werden.</li>
         </ul>
       </div>

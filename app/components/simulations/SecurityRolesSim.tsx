@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-type Role = 'Administrator' | 'ISU_USER' | 'Read-Only User' | 'No Access';
+type Role = 'Administrator' | 'APP_USER' | 'Read-Only User' | 'No Access';
 
 interface SimulatedData {
   customerName: string;
@@ -29,12 +29,12 @@ const rolePermissions: Record<Role, Partial<Record<keyof SimulatedData, boolean>
     billingAmount: true,
     paymentHistory: true,
   },
-  'ISU_USER': {
+  'APP_USER': {
     customerName: true,
     contractId: true,
     address: true,
     meterReading: true,
-    billingAmount: false, // Example: ISU_USER cannot see financial totals directly
+    billingAmount: false, // Example: APP_USER cannot see financial totals directly
     paymentHistory: false,
   },
   'Read-Only User': {
@@ -56,7 +56,7 @@ const rolePermissions: Record<Role, Partial<Record<keyof SimulatedData, boolean>
 };
 
 export const SecurityRolesSim: React.FC = () => {
-  const [selectedRole, setSelectedRole] = useState<Role>('ISU_USER');
+  const [selectedRole, setSelectedRole] = useState<Role>('APP_USER');
   const [showBapi, setShowBapi] = useState(false);
 
   const getVisibleData = () => {
@@ -84,11 +84,11 @@ export const SecurityRolesSim: React.FC = () => {
 
   const bapiExamplePFCG = `{
   "BAPI_USER_GET_DETAIL": {
-    "USERNAME": "ISU_USER",
+    "USERNAME": "APP_USER",
     "RETURN": {
       "ACTIVITYGROUPS": [
-        { "AGR_NAME": "SAP_ISU_USER_COMPOSITE" },
-        { "AGR_NAME": "Z_ISU_CUSTOM_DISPLAY" }
+        { "AGR_NAME": "SAP_APP_USER_COMPOSITE" },
+        { "AGR_NAME": "Z_APP_CUSTOM_DISPLAY" }
         // ... weitere Rollen / Profile
       ],
       "PROFILES": [
@@ -113,7 +113,7 @@ export const SecurityRolesSim: React.FC = () => {
       <div className="mb-6 p-4 border rounded-md bg-blue-50">
         <h3 className="text-xl font-semibold mb-2 text-blue-700">Lernziele</h3>
         <ul className="list-disc pl-5 text-gray-700">
-          <li>Grundlegendes Verständnis von Rollen und Berechtigungen in SAP IS-U.</li>
+          <li>Grundlegendes Verständnis von Rollen und Berechtigungen im SAP-System.</li>
           <li>Auswirkungen verschiedener Rollen auf die Datensichtbarkeit.</li>
           <li>Wichtige Transaktionen zur Benutzer- und Rollenverwaltung (z.B. SU01, PFCG).</li>
           <li>Beispielhafte BAPIs im Kontext von Benutzerberechtigungen.</li>
@@ -127,7 +127,7 @@ export const SecurityRolesSim: React.FC = () => {
             <strong>Administrator:</strong> Vollzugriff auf alle Daten und Funktionen. Typischerweise für Systembetreuung und Customizing.
           </p>
           <p className="text-sm text-gray-600 mb-1">
-            <strong>ISU_USER (Sachbearbeiter):</strong> Zugriff auf abrechnungsrelevante Daten, Kundeninformationen und Prozesse. Eingeschränkte Berechtigungen für kritische Finanzdaten oder Systemänderungen. Dies ist eine häufig verwendete Standardrolle oder eine Basis für kundenindividuelle Rollen.
+            <strong>APP_USER (Sachbearbeiter):</strong> Zugriff auf abrechnungsrelevante Daten, Kundeninformationen und Prozesse. Eingeschränkte Berechtigungen für kritische Finanzdaten oder Systemänderungen. Dies ist eine häufig verwendete Standardrolle oder eine Basis für kundenindividuelle Rollen.
           </p>
           <p className="text-sm text-gray-600 mb-1">
             <strong>Read-Only User (Anzeigebenutzer):</strong> Kann bestimmte Daten einsehen, aber keine Änderungen vornehmen. Nützlich für Reporting oder Support.
@@ -148,7 +148,7 @@ export const SecurityRolesSim: React.FC = () => {
             className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
           >
             <option value="Administrator">Administrator</option>
-            <option value="ISU_USER">ISU_USER (Sachbearbeiter)</option>
+            <option value="APP_USER">APP_USER (Sachbearbeiter)</option>
             <option value="Read-Only User">Read-Only User (Anzeige)</option>
             <option value="No Access">Kein Zugriff</option>
           </select>
@@ -188,7 +188,7 @@ export const SecurityRolesSim: React.FC = () => {
         <ul className="list-disc pl-5 text-sm text-yellow-700">
           <li>Die hier gezeigte Simulation ist stark vereinfacht. Das SAP-Berechtigungssystem ist sehr detailliert und basiert auf Berechtigungsobjekten, Feldern und Werten.</li>
           <li>Rollen werden in der Transaktion <code>PFCG</code> definiert und Benutzern in <code>SU01</code> zugewiesen.</li>
-          <li>Eine typische Rolle wie <code>SAP_ISU_USER_COMPOSITE</code> ist eine Sammelrolle, die viele Einzelrollen für verschiedene Aufgabenbereiche enthält.</li>
+          <li>Eine typische Rolle wie <code>SAP_APP_USER_COMPOSITE</code> ist eine Sammelrolle, die viele Einzelrollen für verschiedene Aufgabenbereiche enthält.</li>
           <li>Sicherheit umfasst auch Aspekte wie Datenschutz, Systemsicherheit und Zugriffskontrollen über verschiedene Ebenen.</li>
         </ul>
       </div>

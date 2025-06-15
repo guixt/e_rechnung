@@ -187,10 +187,10 @@ export function MarketCommunicationSim() {
           <li>Der <b>Lieferantenwechsel</b> (oft GPKE - Geschäftsprozesse zur Kundenbelieferung mit Elektrizität - genannt) ist ein standardisierter Prozess in der deutschen Energiewirtschaft.</li>
           <li><b>UTILMD</b> ist ein EDIFACT-Nachrichtenformat für Stammdatenänderungen, Anmeldungen, Abmeldungen etc. Es gibt verschiedene Nachrichtentypen (z.B. E01 für Anmeldung).</li>
           <li>Der Netzbetreiber prüft die Anmeldung und sendet eine Bestätigung (oft als CONTRL-Nachricht oder positive UTILMD-Antwort).</li>
-          <li>SAP IS-U verwendet <b>IDocs</b> als internes Format, die dann in EDIFACT-Nachrichten konvertiert werden (und umgekehrt). Die Transaktion <code>WEDI</code> ist die Basis für IDoc-Verwaltung.</li>
-          <li>Im Fehlerfall (z.B. ungültige Daten) sendet der Empfänger eine Fehlernachricht (z.B. APERAK oder negative CONTRL). Solche Fehler können in SAP IS-U im IDoc-Monitoring (<code>BD87</code>) oder speziellen MaKo-Monitoren (<code>EDIMON</code>) analysiert werden.</li>
+          <li>Im SAP-System werden <b>IDocs</b> als internes Format genutzt und bei Bedarf in EDIFACT-Nachrichten konvertiert. Die Transaktion <code>WEDI</code> bildet die Basis für die IDoc-Verwaltung.</li>
+          <li>Im Fehlerfall (z.B. ungültige Daten) sendet der Empfänger eine Fehlernachricht (z.B. APERAK oder negative CONTRL). Solche Fehler lassen sich im IDoc-Monitoring (<code>BD87</code>) oder in speziellen Monitoren (<code>EDIMON</code>) analysieren.</li>
           <li>Weitere wichtige Nachrichten im Prozess sind z.B. MSCONS für die Übermittlung von Zählerständen/Lastgängen.</li>
-          <li>Das Customizing für diese Prozesse (Partnervereinbarungen, Formate, Prozessdefinitionen) ist sehr detailliert und findet sich u.a. unter <i>SAP Utilities - Intercompany Data Exchange</i>.</li>
+          <li>Das Customizing für diese Prozesse (Partnervereinbarungen, Formate, Prozessdefinitionen) befindet sich typischerweise unter <i>Vertrieb - Intercompany Data Exchange</i> im SPRO.</li>
         </ul>
       </div>
     </div>
