@@ -9,6 +9,7 @@ Ein interaktives Lernprojekt rund um elektronische Rechnungen und SAP-Rechnungsp
 - Consulting-Missionen zur E-Invoicing-Einführung
 - Suche und Filtermöglichkeit über alle Module
 - Implementiert mit React Router, TypeScript und Tailwind CSS
+- E-Invoice Analyzer zum Umwandeln einfacher Rechnungen in XRechnung/ZUGFeRD und zurück
 
 ## Installation
 
