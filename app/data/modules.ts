@@ -11,6 +11,7 @@ const modules = [
   { id: "troubleshooting-invoice-transmission", category: 'troubleshooting', title: "Troubleshooting: Rechnungsübermittlung", description: "Eine Rechnung wird nicht korrekt übermittelt. Finde und behebe den Fehler!", type: 'simulation' },
   { id: "vida-peppol-intl", category: 'integration', title: "ViDA & Peppol Netzwerk", description: "Überblick über ViDA, Peppol und internationale E-Invoicing-Anforderungen", type: 'simulation' },
   { id: "sap-sd-fi-integration", category: 'sap', title: "SAP SD/FI E-Invoicing Integration", description: "Rechnungsprozesse, IDocs und Output Management in SAP", type: 'simulation' },
+  { id: "sap-customizing-basics", category: 'sap', title: "SAP Customizing Grundlagen", description: "Konfiguration von Nummernkreisen und Prozessparametern im SPRO", type: 'simulation' },
   { id: "edi-basics-protocols", category: 'basics', title: "EDI Basics & Protokolle", description: "UN/EDIFACT, AS2, OFTP2, SFTP und mehr", type: 'simulation' },
   { id: "presales-consulting-skills", category: 'consulting', title: "Presales & Consulting Skills", description: "Storytelling, Demo-Gestaltung und Umgang mit Kunden", type: 'simulation' },
 ];
