@@ -15,6 +15,7 @@ import { VidaPeppolInternationalSim } from "../components/simulations/VidaPeppol
 import { SapSDFIIntegrationSim } from "../components/simulations/SapSDFIIntegrationSim";
 import { EdiBasicsSim } from "../components/simulations/EdiBasicsSim";
 import { PresalesConsultingSim } from "../components/simulations/PresalesConsultingSim";
+import { CustomizingSim } from "../components/simulations/CustomizingSim";
 
 export default function ModuleDetail() {
   const { id } = useParams();
@@ -57,6 +58,8 @@ export default function ModuleDetail() {
           return <VidaPeppolInternationalSim />;
         case 'sap-sd-fi-integration':
           return <SapSDFIIntegrationSim />;
+        case 'sap-customizing-basics':
+          return <CustomizingSim />;
         case 'edi-basics-protocols':
           return <EdiBasicsSim />;
         case 'presales-consulting-skills':
