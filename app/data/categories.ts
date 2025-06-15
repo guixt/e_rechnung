@@ -15,6 +15,11 @@ const categories = [
     description: 'Rechnungsprozesse und Integration im SAP-Umfeld.'
   },
   {
+    id: 'sap-tools',
+    title: 'SAP-nahe Tools',
+    description: 'Hilfreiche Tools mit direktem Business-Wert im SAP E-Invoicing.'
+  },
+  {
     id: 'troubleshooting',
     title: 'Troubleshooting',
     description: 'Fehleranalyse und Problembehebung bei der Rechnungsübermittlung.'

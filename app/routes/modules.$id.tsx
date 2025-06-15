@@ -16,6 +16,7 @@ import { SapSDFIIntegrationSim } from "../components/simulations/SapSDFIIntegrat
 import { EdiBasicsSim } from "../components/simulations/EdiBasicsSim";
 import { PresalesConsultingSim } from "../components/simulations/PresalesConsultingSim";
 import { CustomizingSim } from "../components/simulations/CustomizingSim";
+import { EInvoiceAnalyzerSim } from "../components/simulations/EInvoiceAnalyzerSim";
 
 export default function ModuleDetail() {
   const { id } = useParams();
@@ -62,6 +63,8 @@ export default function ModuleDetail() {
           return <CustomizingSim />;
         case 'edi-basics-protocols':
           return <EdiBasicsSim />;
+        case 'e-invoice-analyzer':
+          return <EInvoiceAnalyzerSim />;
         case 'presales-consulting-skills':
           return <PresalesConsultingSim />;
         default:
