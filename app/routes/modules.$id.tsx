@@ -17,6 +17,7 @@ import { EdiBasicsSim } from "../components/simulations/EdiBasicsSim";
 import { PresalesConsultingSim } from "../components/simulations/PresalesConsultingSim";
 import { CustomizingSim } from "../components/simulations/CustomizingSim";
 import { EInvoiceAnalyzerSim } from "../components/simulations/EInvoiceAnalyzerSim";
+import { IntlFormatsRoadmapSim } from "../components/simulations/IntlFormatsRoadmapSim";
 
 export default function ModuleDetail() {
   const { id } = useParams();
@@ -65,6 +66,8 @@ export default function ModuleDetail() {
           return <EdiBasicsSim />;
         case 'e-invoice-analyzer':
           return <EInvoiceAnalyzerSim />;
+        case 'intl-formats-roadmap':
+          return <IntlFormatsRoadmapSim />;
         case 'presales-consulting-skills':
           return <PresalesConsultingSim />;
         default:

@@ -15,6 +15,7 @@ const modules = [
   { id: "edi-basics-protocols", category: 'basics', title: "EDI Basics & Protokolle", description: "UN/EDIFACT, AS2, OFTP2, SFTP und mehr", type: 'simulation' },
   { id: "presales-consulting-skills", category: 'consulting', title: "Presales & Consulting Skills", description: "Storytelling, Demo-Gestaltung und Umgang mit Kunden", type: 'simulation' },
   { id: "e-invoice-analyzer", category: 'sap-tools', title: "E-Invoice Analyzer", description: "XRechnung/ZUGFeRD einlesen, visualisieren und Mapping-Fehler finden", type: 'simulation' },
+  { id: "intl-formats-roadmap", category: 'integration', title: "Internationale E-Rechnung & Roadmap", description: "Pflichten, empfangene Formate und technische Roadmap", type: 'simulation' },
 ];
 
 export default modules;
