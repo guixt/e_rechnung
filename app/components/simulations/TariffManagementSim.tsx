@@ -259,11 +259,11 @@ export function TariffManagementSim() {
       <div className="mt-6 p-4 bg-blue-50 rounded">
           <h4 className="font-bold">🎓 Lernhinweise:</h4>
           <ul className="list-disc list-inside space-y-2 text-sm">
-            <li>Tarife in IS-U können sehr komplex sein und verschiedene Preisbestandteile haben (z.B. Arbeitspreis, Grundpreis, Leistungspreis).</li>
+            <li>Tarife in SAP können sehr komplex sein und verschiedene Preisbestandteile haben (z.B. Arbeitspreis, Grundpreis, Leistungspreis).</li>
             <li>Die Preisfindung erfolgt über Schemata und Tarifkonditionen (Transaktion: `EA89` - Preissimulation).</li>
             <li>Staffelpreise ändern sich je nach Verbrauchsmenge.</li>
             <li>Wichtige SAP-Transaktionen (Tarife & Preise): `EA30` (Tarifart anlegen), `EA31` (Tarifart ändern), `EA32` (Tarifart anzeigen), `EA88` (Tarife anzeigen), `EA90` (Preise anzeigen).</li>
-            <li>Customizing-Pfade (SPRO, beispielhaft): SAP Utilities - Vertragsabrechnung - Tarifierung / Preisfindung.</li>
+            <li>Customizing-Pfade (SPRO, beispielhaft): Vertrieb - Vertragsabrechnung - Tarifierung / Preisfindung.</li>
           </ul>
         </div>
     </div>

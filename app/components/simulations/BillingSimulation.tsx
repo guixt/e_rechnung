@@ -338,7 +338,7 @@ export function BillingSimulation() {
       <div className="md:col-span-2 mt-6 p-4 bg-blue-50 rounded">
         <h4 className="font-bold">🎓 Lernhinweise:</h4>
         <ul className="list-disc list-inside space-y-2 text-sm">
-          <li>Eine IS-U Rechnung basiert auf mindestens zwei Zählerständen (Anfang und Ende)</li>
+          <li>Eine Rechnung basiert auf mindestens zwei Zählerständen (Anfang und Ende)</li>
           <li>Der Abrechnungszeitraum wird durch die Zählerstände definiert</li>
           <li>Verschiedene Arten der Zählerstandserfassung sind möglich (Ablesung, Selbstablesung, Schätzung)</li>
           <li>Die Rechnung enthält typischerweise Verbrauchspreise, Grundpreise und bereits gezahlte Abschläge</li>
@@ -350,7 +350,7 @@ export function BillingSimulation() {
       <div className="md:col-span-2 mt-8 p-4 bg-blue-50 rounded">
         <h4 className="font-bold">🎓 Lernhinweise (Abrechnung & Fakturierung):</h4>
         <ul className="list-disc list-inside space-y-2 text-sm">
-          <li>Die Abrechnung in SAP IS-U ist ein komplexer Prozess, der Zählerstände, Tarife, Verträge und Stammdaten berücksichtigt, um Rechnungen zu erstellen.</li>
+          <li>Die Abrechnung im SAP-System ist ein komplexer Prozess, der Zählerstände, Tarife, Verträge und Stammdaten berücksichtigt, um Rechnungen zu erstellen.</li>
           <li>Eine wichtige Transaktion ist die `EA00` (Abrechnungslauf), mit der Massenabrechnungen durchgeführt werden können. Einzelne Verträge können auch über `EA22` (Einzelabrechnungssimulation) oder `EA10` (Turnusabrechnung Einzelkunde) simuliert und abgerechnet werden.</li>
           <li>Abrechnungsbelege (`FKK_BILLDOC`) enthalten alle abrechnungsrelevanten Positionen und bilden die Grundlage für die Fakturierung.</li>
           <li>Die Fakturierung (`EA26` - Fakturierungslauf, `EA19` - Einzelfakturierung) erstellt aus den Abrechnungsbelegen die eigentlichen Rechnungen (Druckbelege) und bucht die Forderungen im Vertragskontokorrent (FI-CA).</li>
@@ -366,7 +366,7 @@ export function BillingSimulation() {
               <li>`EL28`: Zählerstandserfassung (für Korrekturen/Nacherfassungen)</li>
             </ul>
           </li>
-          <li>SPRO-Pfade für das Customizing der Abrechnung finden sich typischerweise unter: <i>SAP Utilities - Vertragsabrechnung</i>. Dort werden z.B. Abrechnungsschemata, Tarife, und Buchungsregeln konfiguriert.</li>
+          <li>SPRO-Pfade für das Customizing der Abrechnung befinden sich beispielsweise unter <i>Vertrieb - Vertragsabrechnung</i>. Dort werden unter anderem Abrechnungsschemata, Tarife und Buchungsregeln konfiguriert.</li>
         </ul>
       </div>
     </div>

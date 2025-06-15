@@ -20,7 +20,7 @@ export default function Modules() {
     <div className="container mx-auto p-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-2">Trainingsmodule</h1>
-        <p className="text-gray-600 mb-4">Wähle ein Thema, um dein IS-U-Wissen zu vertiefen:</p>
+        <p className="text-gray-600 mb-4">Wähle ein Thema, um dein SAP-Wissen zu vertiefen:</p>
 
         <div className="mb-6">
           <input

@@ -4,7 +4,7 @@ import { MissionStep } from './MissionStep';
 
 const learningObjectivesTariff = [
   "Verstehen, wie Kundenanfragen zu Tarifproblemen typischerweise eingehen.",
-  "Erste Analyseschritte im SAP IS-U System bei Tarifstörungen kennenlernen.",
+  "Erste Analyseschritte im SAP-System bei Tarifstörungen kennenlernen.",
   "Relevante Transaktionen für die Tarif- und Abrechnungsanalyse identifizieren.",
   "Grundlagen der Kommunikation mit dem Kunden in einem Consulting-Projekt üben.",
   "Verstehen, wie Customizing-Einstellungen die Tarifabrechnung beeinflussen können (Überblick)."
@@ -171,7 +171,7 @@ export const TariffDisturbanceMission: React.FC = () => {
             <p className="mt-4">Du hast wichtige Aspekte der Consultant-Tätigkeit durchlaufen:</p>
             <ul className="list-disc list-inside pl-4 mt-2 text-gray-700">
               <li>Kundenkommunikation und Auftragsannahme</li>
-              <li>Systematische Analyse im SAP IS-U System</li>
+              <li>Systematische Analyse im SAP-System</li>
               <li>Identifikation von Fehlern im Customizing</li>
               <li>Präsentation und Implementierung einer Lösung</li>
             </ul>

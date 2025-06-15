@@ -153,13 +153,13 @@ export function ProcessStatusSim() {
       <div className="mt-8 p-4 bg-emerald-50 rounded">
         <h4 className="font-bold">🎓 Lernhinweise (Einzugsprozess & Status):</h4>
         <ul className="list-disc list-inside space-y-2 text-sm">
-          <li>Der <b>Einzug</b> ist ein zentraler Geschäftsprozess in SAP IS-U, der die Aufnahme eines neuen Kunden und die Versorgung mit Energie initiiert.</li>
+          <li>Der <b>Einzug</b> ist ein zentraler Geschäftsprozess, der die Aufnahme eines neuen Kunden und die Versorgung mit Energie initiiert.</li>
           <li>Typische Schritte umfassen: Anlage des <b>Geschäftspartners</b> (Transaktion <code>BP</code>), Eröffnung eines <b>Vertragskontos</b> (<code>CAA1</code>), Anlage des <b>Vertrags</b> (oft über Einzugsbeleg <code>EC50E</code> oder im CIC via <code>CIC0</code>), und die technische Installation/Zuordnung des <b>Geräts</b> (<code>EG30</code>, <code>EG33</code>).</li>
           <li>Jedes dieser Objekte (Geschäftspartner, Vertragskonto, Vertrag, Gerät, Anlage) besitzt ein <b>Statusnetzwerk</b>, das festlegt, welche Aktionen in welchem Zustand erlaubt sind und welche Statusübergänge möglich sind.</li>
           <li>Beispielsweise kann ein Vertrag erst abgerechnet werden, wenn er den Status 'Aktiv' oder einen vergleichbaren Status hat. Ein Gerät muss den Status 'Eingebaut' haben, um Ableseergebnisse zu erfassen.</li>
           <li>Die korrekte Abfolge und das Erreichen der richtigen Status sind entscheidend für nachfolgende Prozesse wie Ablesung, Abrechnung und Fakturierung.</li>
           <li>Im SAP-System werden diese Prozesse oft durch Workflows unterstützt, die automatisch Folgeaktivitäten anstoßen oder Benutzer zu bestimmten Aktionen auffordern. Transaktion <code>SWI1</code> kann zur Workflow-Analyse genutzt werden.</li>
-           <li>Das Customizing für Status und Prozesse ist umfangreich und findet sich unter den jeweiligen Komponenten im SPRO (z.B. <i>SAP Utilities - Kundenmanagement - Vertrag</i> oder <i>Geräteverwaltung - Gerätemanagement - Statusmanagement</i>).</li>
+           <li>Das Customizing für Status und Prozesse ist umfangreich und findet sich unter den jeweiligen Komponenten im SPRO (z.B. <i>Vertrieb - Kundenmanagement - Vertrag</i> oder <i>Geräteverwaltung - Gerätemanagement - Statusmanagement</i>).</li>
         </ul>
       </div>
     </div>
