@@ -19,11 +19,19 @@ export function Navigation() {
             </Link>
           </li>
           <li>
-            <Link 
-              to="/modules" 
+            <Link
+              to="/modules"
               className={`hover:text-blue-200 ${isActive('/modules') ? 'font-bold' : ''}`}
             >
               Module
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/improvements"
+              className={`hover:text-blue-200 ${isActive('/improvements') ? 'font-bold' : ''}`}
+            >
+              Verbesserungen
             </Link>
           </li>
         </ul>
