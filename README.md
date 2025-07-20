@@ -50,6 +50,10 @@ docker run -p 3000:3000 e-invoicing-navigator
 
 Dieses Repository dient als Demo- und Lernplattform. Es zeigt, wie man mit React Router eine moderne Webanwendung mit Server-Side Rendering und Hot Module Replacement erstellt.
 
+## Ausblick
+
+Weitere Ideen und Verbesserungsvorschläge findest du auf der neuen Seite [Verbesserungen](/improvements). Dort sind mögliche Erweiterungen speziell für Einsteigerinnen und Einsteiger bei SEEBURGER beschrieben.
+
 ---
 
 Erstellt mit ❤️ mithilfe von React Router.
