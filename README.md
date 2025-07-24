@@ -4,7 +4,7 @@ Ein interaktives Lernprojekt rund um elektronische Rechnungen und SAP-Rechnungsp
 
 ## Funktionsumfang
 
-- Trainingsmodule zu B2B-Formaten, Mapping und Compliance
+- Trainingsmodule zu B2B-Formaten, Mapping, Compliance und nun auch Vorsteuer
 - Simulationen mit direktem Feedback
 - Consulting-Missionen zur E-Invoicing-Einführung
 - Suche und Filtermöglichkeit über alle Module

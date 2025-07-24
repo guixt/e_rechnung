@@ -9,6 +9,7 @@ import { SeeburgerBICSim } from "../components/simulations/SeeburgerBICSim";
 import { MappingConceptsSim } from "../components/simulations/MappingConceptsSim";
 import { IntegrationScenariosSim } from "../components/simulations/IntegrationScenariosSim";
 import { ComplianceArchivingSim } from "../components/simulations/ComplianceArchivingSim";
+import { VorsteuerSim } from "../components/simulations/VorsteuerSim";
 import { EInvoiceImplementationMission } from "../components/missions/EInvoiceImplementationMission";
 import { TroubleshootingInvoiceTransmissionSim } from "../components/simulations/TroubleshootingInvoiceTransmissionSim";
 import { VidaPeppolInternationalSim } from "../components/simulations/VidaPeppolInternationalSim";
@@ -52,6 +53,8 @@ export default function ModuleDetail() {
           return <IntegrationScenariosSim />;
         case 'invoicing-accounting':
           return <InvoicingAccountingSim />;
+        case 'vorsteuer-basics':
+          return <VorsteuerSim />;
         case 'compliance-archiving':
           return <ComplianceArchivingSim />;
         case 'troubleshooting-invoice-transmission':
