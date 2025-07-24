@@ -6,6 +6,7 @@ const modules = [
   { id: "mapping-concepts", category: 'integration', title: "Mapping & Transformation", description: "Datenmapping zwischen SAP und E-Invoicing Formaten", type: 'simulation' },
   { id: "integration-scenarios", category: 'integration', title: "Integrationsszenarien", description: "Cloud und On-Premise Lösungen für E-Invoicing", type: 'simulation' },
   { id: "invoicing-accounting", category: 'sap', title: "Faktura & Buchhaltung", description: "Belegerzeugung, Druck, Übertragung und Verbuchung", type: 'simulation' },
+  { id: "vorsteuer-basics", category: 'sap', title: "Vorsteuer verstehen", description: "Voraussetzungen, Buchungen und typische Fehlerquellen", type: 'simulation' },
   { id: "compliance-archiving", category: 'basics', title: "Compliance & Archivierung", description: "Rechtskonforme Archivierung von elektronischen Rechnungen", type: 'simulation' },
   { id: "mission-e-invoice-implementation", category: 'missions', title: "Consulting Mission: E-Invoicing Implementierung", description: "Simulierter Consultant-Einsatz zur Implementierung einer E-Invoicing-Lösung", type: 'mission' },
   { id: "troubleshooting-invoice-transmission", category: 'troubleshooting', title: "Troubleshooting: Rechnungsübermittlung", description: "Eine Rechnung wird nicht korrekt übermittelt. Finde und behebe den Fehler!", type: 'simulation' },
